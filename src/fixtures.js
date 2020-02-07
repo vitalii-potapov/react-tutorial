@@ -163,6 +163,6 @@ const restaurants = [
       },
     ],
   },
-]
+];
 
-export {restaurants}
+export { restaurants };

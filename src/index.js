@@ -1,5 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-ReactDOM.render(<h1>Hello world!</h1>, document.getElementById('root'))
+import App from './components/app';
+import { restaurants } from './fixtures';
+import './index.css';
+
+ReactDOM.render(
+  <App restaurants={restaurants} />,
+  document.getElementById('root')
+);
