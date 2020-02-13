@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react';
 import { Card, Typography, Button } from 'antd';
-import useAmount from '../../hooks/use-amount';
+import amount from '../../decorators/amount';
 
 const { Text } = Typography;
 
 function Dish(props) {
-  const { amount, increase, decrease } = useAmount(0);
   useEffect(() => {
     console.log('Apply Effect');
   });
 
-  const { dish } = props;
+  const { dish, amount, increase, decrease } = props;
   return (
     <div>
       <Card tile={dish.name}>
@@ -26,4 +25,4 @@ function Dish(props) {
   );
 }
 
-export default Dish;
+export default amount(Dish);
