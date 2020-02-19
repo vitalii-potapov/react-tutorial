@@ -1,17 +1,32 @@
 import React, { Component } from 'react';
 
-export default class ReviewForm extends Component {
+class ReviewForm extends Component {
+  state = {
+    text: '',
+  };
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <p>Add your review:</p>
-        <input type={'text'} />
+        <input
+          value={this.state.text}
+          onChange={this.handleInput}
+          type="text"
+        />
       </form>
     );
   }
 
+  handleInput = e => {
+    this.setState({
+      text: e.target.value.length > 6 ? '' : e.target.value,
+    });
+  };
   handleSubmit = e => {
     e.preventDefault();
-    console.log('submit');
+    console.log('submit', this.state);
   };
 }
+
+export default ReviewForm;
