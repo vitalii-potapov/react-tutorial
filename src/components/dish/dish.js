@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+// import React, { useEffect } from 'react';
 import { Card, Typography, Button } from 'antd';
 import amount from '../../decorators/amount';
 
 const { Text } = Typography;
 
 function Dish(props) {
-  useEffect(() => {
-    console.log('Apply Effect');
-  });
+  // useEffect(() => {
+  //   console.log('Apply Effect');
+  // });
 
   const { dish, amount, increase, decrease } = props;
   return (
